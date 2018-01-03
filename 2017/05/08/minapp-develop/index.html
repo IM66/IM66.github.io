@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/08/minapp-develop/index.html">
 <meta property="og:site_name" content="啦啦啦的博客">
 <meta property="og:description" content="多看点东西，总是有用的~~~去年把小程序的文档看了，还写了个 demo 玩玩，今年来了做小程序的需求，一个人很愉快的完成了o(￣▽￣)ブ记录下几个这次用到的点，方便以后好找，前端的需要点的技能树太多了，点完一个后，记录下，下次再做的时候就简单多了。上一篇微信小程序上手传送门 图片问题：背景图片不支持相对路径方法：使用base64图片或者绝对路径 问题：官方提供的图片预览wx.previewImag">
-<meta property="og:updated_time" content="2017-05-10T02:42:29.000Z">
+<meta property="og:updated_time" content="2018-01-03T02:42:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序一些记录点">
 <meta name="twitter:description" content="多看点东西，总是有用的~~~去年把小程序的文档看了，还写了个 demo 玩玩，今年来了做小程序的需求，一个人很愉快的完成了o(￣▽￣)ブ记录下几个这次用到的点，方便以后好找，前端的需要点的技能树太多了，点完一个后，记录下，下次再做的时候就简单多了。上一篇微信小程序上手传送门 图片问题：背景图片不支持相对路径方法：使用base64图片或者绝对路径 问题：官方提供的图片预览wx.previewImag">
@@ -178,12 +178,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>多看点东西，总是有用的~~~去年把小程序的文档看了，还写了个 demo 玩玩，今年来了做小程序的需求，一个人很愉快的完成了o(<em>￣▽￣</em>)ブ记录下几个这次用到的点，方便以后好找，前端的需要点的技能树太多了，点完一个后，记录下，下次再做的时候就简单多了。<br>上一篇<a href="https://im66.github.io/2017/01/14/wechat-mini-app/" target="_blank" rel="external">微信小程序上手</a>传送门</p>
+        <p>多看点东西，总是有用的~~~去年把小程序的文档看了，还写了个 demo 玩玩，今年来了做小程序的需求，一个人很愉快的完成了o(<em>￣▽￣</em>)ブ记录下几个这次用到的点，方便以后好找，前端的需要点的技能树太多了，点完一个后，记录下，下次再做的时候就简单多了。<br>上一篇<a href="https://im66.github.io/2017/01/14/wechat-mini-app/" target="_blank" rel="noopener">微信小程序上手传送门</a></p>
 <h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>问题：背景图片不支持相对路径<br>方法：使用base64图片或者绝对路径</p>
 <p>问题：官方提供的图片预览wx.previewImage无法显示图片的说明文字<br>方法：跳转到新的页面，使用swiper组件实现</p>
 <h3 id="加active效果"><a href="#加active效果" class="headerlink" title="加active效果"></a>加active效果</h3><p>小程序页面的脚本逻辑是在JsCore中运行的，JsCore是一个没有窗口对象的环境，所以不能在脚本中使用window和document，所以无法操作DOM。<br>办法：通过index操作数据<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">scroll-view</span> <span class="attr">class</span>=<span class="string">"nav"</span> <span class="attr">scroll-x</span>=<span class="string">"true"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">view</span> <span class="attr">hover</span>=<span class="string">"true"</span> <span class="attr">hover-class</span>=<span class="string">"hover-class"</span> <span class="attr">class</span>=<span class="string">"nav-list &#123;&#123;item.class&#125;&#125;"</span> <span class="attr">data-columnid</span>=<span class="string">"&#123;&#123;item.id&#125;&#125;"</span> <span class="attr">data-columntype</span>=<span class="string">"&#123;&#123;item.columntype&#125;&#125;"</span> <span class="attr">wx:for</span>=<span class="string">"&#123;&#123;nav&#125;&#125;"</span> <span class="attr">wx:key</span>=<span class="string">"&#123;&#123;item.id&#125;&#125;"</span> <span class="attr">data-index</span>=<span class="string">"&#123;&#123;index&#125;&#125;"</span> <span class="attr">bindtap</span>=<span class="string">"changeColumn"</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">scroll-view</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">changeColumn: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> navData = <span class="keyword">this</span>.data.nav;</div><div class="line">    <span class="keyword">var</span> currentNavIndex = e.currentTarget.dataset.index;</div><div class="line">    navData[currentNavIndex].class = <span class="string">"active"</span>;</div><div class="line">    navData[<span class="keyword">this</span>.data.currentNavIndex].class = <span class="string">""</span>;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.setData(&#123;</div><div class="line">        <span class="attr">nav</span>: navData,</div><div class="line">        <span class="attr">scroll</span>:[],</div><div class="line">        <span class="attr">list</span>:[],</div><div class="line">        <span class="attr">pageNum</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">columnId</span>: e.currentTarget.dataset.columnid,</div><div class="line">        <span class="attr">columnType</span>: e.currentTarget.dataset.columntype,</div><div class="line">        <span class="attr">currentNavIndex</span>: currentNavIndex,</div><div class="line">        <span class="attr">currentScrollIndex</span>: <span class="number">0</span>,</div><div class="line">        <span class="attr">loadingText</span>: <span class="string">''</span>,</div><div class="line">        <span class="attr">hasmore</span>: <span class="number">1</span></div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.onPullDownRefresh();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="富文本处理"><a href="#富文本处理" class="headerlink" title="富文本处理"></a>富文本处理</h3><p>小程序里面的标签都是自定义的标签，无法直接使用富文本编辑器编辑的内容。<br>办法：搜索一下，已经有别人写好的组件<a href="https://github.com/icindy/wxParse" target="_blank" rel="external">wxParse-微信小程序富文本解析自定义组件</a></p>
+<h3 id="富文本处理"><a href="#富文本处理" class="headerlink" title="富文本处理"></a>富文本处理</h3><p>小程序里面的标签都是自定义的标签，无法直接使用富文本编辑器编辑的内容。<br>办法：搜索一下，已经有别人写好的组件<a href="https://github.com/icindy/wxParse" target="_blank" rel="noopener">wxParse-微信小程序富文本解析自定义组件</a></p>
 <h3 id="表单键盘"><a href="#表单键盘" class="headerlink" title="表单键盘"></a>表单键盘</h3><p>在做 WAP 版的时候，在ios上有个bug就是 input 和 fixed同时用的时候，fixed定位会失效。<br>小程序input 和 textarea 组件提供 cursor-spacing 属性，指定光标与键盘的距离。同时设置fixed属性</p>
 <h3 id="获取用户信息"><a href="#获取用户信息" class="headerlink" title="获取用户信息"></a>获取用户信息</h3><p>通过wx.login和wx.getUserInfo获取用户信息。<br>如果用户第一次进来的时候拒绝授权，当需要用到的用户信息的时候，可以用wx.openSetting</p>
 <h3 id="多个视频同时播放"><a href="#多个视频同时播放" class="headerlink" title="多个视频同时播放"></a>多个视频同时播放</h3><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>许久不写东西，又不会写了，而且碰到的东西，最好随手记下，弄个大纲之类的东西，现在想想又回忆不起来有哪些细节了╮（╯＿╰）╭</p>
@@ -332,7 +332,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Chen Lulu
+    		&copy; 2018 Chen Lulu
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -414,19 +414,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -438,11 +434,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -455,14 +463,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -383,7 +383,7 @@
 <h3 id="移动端input内长按复制粘贴时，无法触发onkeyup-onkeydown-onchange-事件"><a href="#移动端input内长按复制粘贴时，无法触发onkeyup-onkeydown-onchange-事件" class="headerlink" title="移动端input内长按复制粘贴时，无法触发onkeyup, onkeydown, onchange 事件"></a>移动端input内长按复制粘贴时，无法触发onkeyup, onkeydown, onchange 事件</h3><p>原因：onchange需要失去焦点才能触发<br>办法：改为oninput事件或者onpropertychange</p>
 <h3 id="动画出现重影"><a href="#动画出现重影" class="headerlink" title="动画出现重影"></a>动画出现重影</h3><p>原因：由于transform导致z-index提高，而出现重影<br>办法：加上初始的css加上-webkit-transform:translateZ(0) </p>
 <h3 id="魅族自带浏览器不支持position-fixed"><a href="#魅族自带浏览器不支持position-fixed" class="headerlink" title="魅族自带浏览器不支持position: fixed;"></a>魅族自带浏览器不支持position: fixed;</h3><p>原因：不知道╮(╯-╰)╭ MX4 Pro 自带浏览器是不支持的，魅族有的手机又是支持的，有版本的系统是支持的<br>办法：在fixed元素下面加上三个以上a标签即可显示元素<br>吐槽：难道是想屏蔽广告？</p>
-<h3 id="ios上传竖排照片旋转90deg"><a href="#ios上传竖排照片旋转90deg" class="headerlink" title="ios上传竖排照片旋转90deg"></a>ios上传竖排照片旋转90deg</h3><p>利用exif.js读取照片的拍摄信息<br><a href="http://code.ciaoca.com/javascript/exif-js/" target="_blank" rel="external">http://code.ciaoca.com/javascript/exif-js/</a></p>
+<h3 id="ios上传竖排照片旋转90deg"><a href="#ios上传竖排照片旋转90deg" class="headerlink" title="ios上传竖排照片旋转90deg"></a>ios上传竖排照片旋转90deg</h3><p>利用exif.js读取照片的拍摄信息<br><a href="http://code.ciaoca.com/javascript/exif-js/" target="_blank" rel="noopener">http://code.ciaoca.com/javascript/exif-js/</a></p>
 <h3 id="ios-input输入内容时，fiexed元素错位"><a href="#ios-input输入内容时，fiexed元素错位" class="headerlink" title="ios input输入内容时，fiexed元素错位"></a>ios input输入内容时，fiexed元素错位</h3><p>原因：input元素唤起软键盘时，fixed元素变成了abusolute元素，而位置不变<br>办法：<br>1、input focus时，将fixed改成relative<br>2、iscroll<br>3、中间部分局部滚动，整体高度不超过一屏<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">header</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>; <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">30px</span>;</div><div class="line">	<span class="attribute">bottom</span>: <span class="number">30px</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">	<span class="attribute">overflow-y</span>: scroll;</div><div class="line">	<span class="attribute">-webkit-overflow-scrolling</span>: touch; <span class="comment">/*优化滚动*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-tag">footer</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">bottom</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>; <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="移动端hover效果"><a href="#移动端hover效果" class="headerlink" title="移动端hover效果"></a>移动端hover效果</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-tap-highlight-color</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.3</span>);</div></pre></td></tr></table></figure>
 <h3 id="ios下按钮默认圆角、阴影"><a href="#ios下按钮默认圆角、阴影" class="headerlink" title="ios下按钮默认圆角、阴影"></a>ios下按钮默认圆角、阴影</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-appearance</span><span class="selector-pseudo">:none</span>;  <span class="comment">/*去除input默认样式*/</span></div></pre></td></tr></table></figure>
@@ -458,7 +458,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="comment">&lt;!-- lang 这里保留意见，因为看过不同的资料，自己还没折腾清楚，知乎关于 lang 的讨论地址 https://www.zhihu.com/question/20797118 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 字符编码 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 优先使用 IE 最新版本和 Chrome，常用于 PC 版 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge,chrome=1"</span>&gt;</span> </div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"renderer"</span> <span class="attr">content</span>=<span class="string">"webkit"</span> &gt;</span></div><div class="line">	<span class="comment">&lt;!-- SEO优化 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">"啦啦啦的博客"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">"web前端"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 移动端 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 禁止数字识自动别为电话号码 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 禁止自动自动识别 Email --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"email=no"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- ios --&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 启用 WebApp 全屏模式 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"yes"</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-capable"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 添加到主屏后的标题 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-title"</span> <span class="attr">content</span>=<span class="string">啦啦啦</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 设置状态栏的背景颜色 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">content</span>=<span class="string">"transparent"</span> <span class="attr">name</span>=<span class="string">"apple-mobile-web-app-status-bar-style"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- icon --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"apple-touch-icon-precomposed"</span> <span class="attr">href</span>=<span class="string">"icon.png"</span>&gt;</span> </div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>常用meta<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="external">https://github.com/yisibl/blog/issues/1</a><br><a href="https://www.zhihu.com/question/20797118" target="_blank" rel="external">https://www.zhihu.com/question/20797118</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://github.com/yisibl/blog/issues/1" target="_blank" rel="noopener">https://github.com/yisibl/blog/issues/1</a><br><a href="https://www.zhihu.com/question/20797118" target="_blank" rel="noopener">https://www.zhihu.com/question/20797118</a></p>
 
       
 
@@ -529,7 +529,7 @@
 <p>将 width 设置为device-width, 为什么要要这样写？这里的width是什么？<br>在默认情况下，我们用浏览器打开一个PC版的浏览器会发现，在手机浏览器中也能够完全显示，只是缩小了。<br>原因就在于layout viewport, iphone 的默认layout viewport为980，所以我们能够完整显示网页。<br>而还有个概念就是visual viewport: 浏览器可视区域的大小<br>我们要适配手机端浏览器的屏幕大小，将layout viewport = visual viewport, 以达到最佳视窗</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=320, user-scalable=no, maximum-scale=1.3"</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>这类简单粗暴的适配，就是将layout viewport 设置为320，然后大屏的手机进行缩放来适配如6s 的375px的宽度</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="external">http://www.cnblogs.com/2050/p/3877280.html</a><br><a href="http://weizhifeng.net/viewports.html" target="_blank" rel="external">http://weizhifeng.net/viewports.html</a><br><a href="http://weizhifeng.net/viewports2.html" target="_blank" rel="external">http://weizhifeng.net/viewports2.html</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://www.cnblogs.com/2050/p/3877280.html" target="_blank" rel="noopener">http://www.cnblogs.com/2050/p/3877280.html</a><br><a href="http://weizhifeng.net/viewports.html" target="_blank" rel="noopener">http://weizhifeng.net/viewports.html</a><br><a href="http://weizhifeng.net/viewports2.html" target="_blank" rel="noopener">http://weizhifeng.net/viewports2.html</a></p>
 
       
 
@@ -616,7 +616,7 @@
 <li>将根元素以100px为基准来设置，这样对psd原稿进行还原的时候，比较好计算，10px由于chrome浏览器在PC上最小像素不小于10px，所以设置为100px（网易用的是这种计算机方式）<br> （淘宝用的是docEl.style.fontSize = 75 * (clientWidth / 750) + ‘px’; 10rem = 一屏的宽度， 两种思想的角度不一样，我自己习惯用上面的，因为一眼可以看出效果图实际多少像素）</li>
 <li>可以用利用一些工具，直接写px为单位的css，然后转换成rem为单位，减少工作量（所以本质上上面两种是没有区别的）</li>
 </ol>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://isux.tencent.com/web-app-rem.html" target="_blank" rel="external">http://isux.tencent.com/web-app-rem.html</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://isux.tencent.com/web-app-rem.html" target="_blank" rel="noopener">http://isux.tencent.com/web-app-rem.html</a></p>
 
       
 
@@ -722,7 +722,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Chen Lulu
+    		&copy; 2018 Chen Lulu
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -804,19 +804,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -828,11 +824,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -845,14 +853,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -182,7 +182,7 @@
 <h3 id="移动端input内长按复制粘贴时，无法触发onkeyup-onkeydown-onchange-事件"><a href="#移动端input内长按复制粘贴时，无法触发onkeyup-onkeydown-onchange-事件" class="headerlink" title="移动端input内长按复制粘贴时，无法触发onkeyup, onkeydown, onchange 事件"></a>移动端input内长按复制粘贴时，无法触发onkeyup, onkeydown, onchange 事件</h3><p>原因：onchange需要失去焦点才能触发<br>办法：改为oninput事件或者onpropertychange</p>
 <h3 id="动画出现重影"><a href="#动画出现重影" class="headerlink" title="动画出现重影"></a>动画出现重影</h3><p>原因：由于transform导致z-index提高，而出现重影<br>办法：加上初始的css加上-webkit-transform:translateZ(0) </p>
 <h3 id="魅族自带浏览器不支持position-fixed"><a href="#魅族自带浏览器不支持position-fixed" class="headerlink" title="魅族自带浏览器不支持position: fixed;"></a>魅族自带浏览器不支持position: fixed;</h3><p>原因：不知道╮(╯-╰)╭ MX4 Pro 自带浏览器是不支持的，魅族有的手机又是支持的，有版本的系统是支持的<br>办法：在fixed元素下面加上三个以上a标签即可显示元素<br>吐槽：难道是想屏蔽广告？</p>
-<h3 id="ios上传竖排照片旋转90deg"><a href="#ios上传竖排照片旋转90deg" class="headerlink" title="ios上传竖排照片旋转90deg"></a>ios上传竖排照片旋转90deg</h3><p>利用exif.js读取照片的拍摄信息<br><a href="http://code.ciaoca.com/javascript/exif-js/" target="_blank" rel="external">http://code.ciaoca.com/javascript/exif-js/</a></p>
+<h3 id="ios上传竖排照片旋转90deg"><a href="#ios上传竖排照片旋转90deg" class="headerlink" title="ios上传竖排照片旋转90deg"></a>ios上传竖排照片旋转90deg</h3><p>利用exif.js读取照片的拍摄信息<br><a href="http://code.ciaoca.com/javascript/exif-js/" target="_blank" rel="noopener">http://code.ciaoca.com/javascript/exif-js/</a></p>
 <h3 id="ios-input输入内容时，fiexed元素错位"><a href="#ios-input输入内容时，fiexed元素错位" class="headerlink" title="ios input输入内容时，fiexed元素错位"></a>ios input输入内容时，fiexed元素错位</h3><p>原因：input元素唤起软键盘时，fixed元素变成了abusolute元素，而位置不变<br>办法：<br>1、input focus时，将fixed改成relative<br>2、iscroll<br>3、中间部分局部滚动，整体高度不超过一屏<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">header</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>; <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.main</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">30px</span>;</div><div class="line">	<span class="attribute">bottom</span>: <span class="number">30px</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">	<span class="attribute">overflow-y</span>: scroll;</div><div class="line">	<span class="attribute">-webkit-overflow-scrolling</span>: touch; <span class="comment">/*优化滚动*/</span></div><div class="line">&#125;</div><div class="line"><span class="selector-tag">footer</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">bottom</span>: <span class="number">0</span>; <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">100%</span>; <span class="attribute">height</span>: <span class="number">30px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="移动端hover效果"><a href="#移动端hover效果" class="headerlink" title="移动端hover效果"></a>移动端hover效果</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-tap-highlight-color</span>: <span class="selector-tag">rgba</span>(0, 0, 0, 0<span class="selector-class">.3</span>);</div></pre></td></tr></table></figure>
 <h3 id="ios下按钮默认圆角、阴影"><a href="#ios下按钮默认圆角、阴影" class="headerlink" title="ios下按钮默认圆角、阴影"></a>ios下按钮默认圆角、阴影</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">-webkit-appearance</span><span class="selector-pseudo">:none</span>;  <span class="comment">/*去除input默认样式*/</span></div></pre></td></tr></table></figure>
@@ -339,7 +339,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 Chen Lulu
+    		&copy; 2018 Chen Lulu
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -421,19 +421,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">app</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,11 +441,23 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">wechat</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">img</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,14 +470,6 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">img</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">替换元素</a>
               </li>
              
               <li class="article-tag-list-item">
