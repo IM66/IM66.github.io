@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://im66.github.io">
-  <title>Archives: 2017 | 啦啦啦的博客</title>
+  <title>前端入门-总被你忽略的HTML | 啦啦啦的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端技术博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="啦啦啦的博客">
-<meta property="og:url" content="http://im66.github.io/archives/2017/page/2/index.html">
+  <meta name="description" content="最近经常会有小伙伴来问关于转前端的问题，于是经常性发生下面的对话“小姐姐，小姐姐，有点想学前端，能给点建议么？要学JS、Jquery、VUE、Bootstrap？还有什么？”“HTML、CSS、JS分别是前端的三个方面的基础，要从这三个方向开始入门”“HTML我有在看，就是一些标签，感觉挺简单的”“你平时有在练习么，一般什么情况用什么标签？”“emmmmmm，一般都用div，列表的时候用ul li">
+<meta name="keywords" content="HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端入门-总被你忽略的HTML">
+<meta property="og:url" content="http://im66.github.io/2018/06/05/study-html/index.html">
 <meta property="og:site_name" content="啦啦啦的博客">
-<meta property="og:description" content="前端技术博客">
+<meta property="og:description" content="最近经常会有小伙伴来问关于转前端的问题，于是经常性发生下面的对话“小姐姐，小姐姐，有点想学前端，能给点建议么？要学JS、Jquery、VUE、Bootstrap？还有什么？”“HTML、CSS、JS分别是前端的三个方面的基础，要从这三个方向开始入门”“HTML我有在看，就是一些标签，感觉挺简单的”“你平时有在练习么，一般什么情况用什么标签？”“emmmmmm，一般都用div，列表的时候用ul li">
+<meta property="og:updated_time" content="2018-07-30T05:48:23.203Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="啦啦啦的博客">
-<meta name="twitter:description" content="前端技术博客">
+<meta name="twitter:title" content="前端入门-总被你忽略的HTML">
+<meta name="twitter:description" content="最近经常会有小伙伴来问关于转前端的问题，于是经常性发生下面的对话“小姐姐，小姐姐，有点想学前端，能给点建议么？要学JS、Jquery、VUE、Bootstrap？还有什么？”“HTML、CSS、JS分别是前端的三个方面的基础，要从这三个方向开始入门”“HTML我有在看，就是一些标签，感觉挺简单的”“你平时有在练习么，一般什么情况用什么标签？”“emmmmmm，一般都用div，列表的时候用ul li">
   
     <link rel="alternative" href="/atom.xml" title="啦啦啦的博客" type="application/atom+xml">
   
@@ -144,101 +146,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-study-html" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/02/sticky/" class="archive-article-date">
-  	<time datetime="2017-01-02T03:36:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-02</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/02/sticky/">sticky</a>
+    <h1 class="article-title" itemprop="name">
+      前端入门-总被你忽略的HTML
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/05/study-html/" class="archive-article-date">
+  	<time datetime="2018-06-05T01:30:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近经常会有小伙伴来问关于转前端的问题，于是经常性发生下面的对话<br>“小姐姐，小姐姐，有点想学前端，能给点建议么？要学JS、Jquery、VUE、Bootstrap？还有什么？”<br>“HTML、CSS、JS分别是前端的三个方面的基础，要从这三个方向开始入门”<br>“HTML我有在看，就是一些标签，感觉挺简单的”<br>“你平时有在练习么，一般什么情况用什么标签？”<br>“emmmmmm，一般都用div，列表的时候用ul li”</p>
+<p>很多开始接触前端的同学都会觉得HTML不就是几个标签么，用的时候不管三七二十一直接div了。甚至于一些老鸟也是这样，打开网页查看源代码会发现div泛滥，但是要比远古的table布局好多了。万事皆有因，如果一个div就能解决的事，为什么要创造出另外这么多的标签呢？下面开始我们的灵魂三问：what？why？how？</p>
+<h3 id="HTML是什么？"><a href="#HTML是什么？" class="headerlink" title="HTML是什么？"></a>HTML是什么？</h3><blockquote>
+<p>HTML 是 Hypertext Markup Language 的缩写，即超文本标记语言</p>
+</blockquote>
+<p>M: Markup 标记，这就离不开我们的各种标签了<br>L: Language 语言， 既然是语言就有语法、语义。<br>随着互联网的发展，HTML也迭代过很多版本，平时所说的HTML5就是HTML第五次修改版本，支持IE9以上。<br>tips:如果不确定浏览器支不支持可以用<a href="https://caniuse.com" target="_blank" rel="noopener">caniuse</a>来查看。</p>
+<h3 id="为什么不能忽略HTML？"><a href="#为什么不能忽略HTML？" class="headerlink" title="为什么不能忽略HTML？"></a>为什么不能忽略HTML？</h3><p>有人会想，既然我一个div就能搞定的事情，为什么要那么麻烦？<br>我们来一个个场景设想<br>1、当你加载一个页面，CSS 加载不下来，这时候就是考验HTML功底的时候了。 HTML 相当于你的骨架，而 CSS 就是衣服。CSS 固然好看，但是在没有 CSS 这件衣服的情况下，也要让阅读者能很容易的看懂内容，分清轻重。这大概就是美人在骨不在皮。好的前端代码的基础就是HTML。<br>2、当你的鼠标坏了，你要进行一个表单操作，然而，表单的 button 使用 div 模拟的，这时候你想要点击这个按钮就只能干瞪眼了。<br>3、假设是一个视力障碍的人想了解信息，我们要怎么呈现，才能让他了解信息呢？<br>4、上面说的都是从用户的角度，如果从代码的角度来说，好的HTML结构能够便于团队的开发和维护，有利于SEO</p>
+<h3 id="怎样注重HTML？"><a href="#怎样注重HTML？" class="headerlink" title="怎样注重HTML？"></a>怎样注重HTML？</h3><p>还是上面的遇到问题几个场景，有想到解决办法么<br>1、鼠标这个问题，我们平时尽量不用 div 来模拟按钮，如果非要用的话，可以设置tabindex<br>2、视力障碍的人，我们可以使用aria-*属性，来帮助他们听到信息，我们多做一点，就能让更多的群体加入互联网，了解更多的知识<br>3、而整体的 HTML 功底，就需要熟悉的了解HTML 语义化了</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://im66.github.io/2018/06/05/study-html/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/01/01/vertical/" class="archive-article-date">
-  	<time datetime="2017-01-01T08:40:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-01</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/01/01/vertical/">垂直居中</a>
-    </h1>
+  
+    <a href="/2018/04/17/toFixed-feature/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">toFixed的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2017/">&laquo; Prev</a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -262,8 +319,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -331,7 +388,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -339,7 +396,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">canvas</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -352,6 +409,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">app</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -375,15 +440,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">wechat</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">微信小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">viewport</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
